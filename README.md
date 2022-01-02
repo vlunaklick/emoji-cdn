@@ -1,8 +1,8 @@
 # Emoji Catcher
 
-Emoji Catcher is a Node.js and Express based emoji CDN, based on the original version by Ben Borgers. It also utilizes Express-Expenditious to improve image delivery speed through an efficient caching system. Additionally, it features customizable styles that can be searched via a URL query, allowing for a more versatile and adaptable emoji search experience.
+Emoji Catcher is a CDN service built with Node.js and Express that enables users to get PNG images of emojis through their URL. Inspired by Ben Borgers' version, this project allows users to choose from different emoji styles, such as Apple or Google, through a simple "?style=" query. To provide a smooth and uninterrupted experience for the user, the express-expenditious library was implemented to optimize loading speed through caching the emoji images.
 
-## Deploy: [Live View](https://emoji-catcher.up.railway.app/) :destellos:
+## Deploy: [Live View](https://emoji-catcher.up.railway.app/) ✨
 
 You can view the live version of the project by clicking on the link above.
 
@@ -45,4 +45,5 @@ npm run dev || start
 
 - Github: [@vlunaklick](https://github.com/vlunaklick)
 - LinkedIn: [@vlunaklick](https://linkedin.com/in/vlunaklick)
-  Feel free to reach out to me with any questions or feedback about this project!
+
+Feel free to reach out to me with any questions or feedback about this project!

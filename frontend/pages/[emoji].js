@@ -10,7 +10,15 @@ export function getServerSideProps(context) {
 
 	if (style === undefined) {
 		style = 'apple'
+	} else if (style === 'facebook') {
+		style = 'facebook/230'
+	} else if (style === 'messenger') {
+		style = 'facebook/65'
 	}
+
+	const result = fetch(
+		`http://localhost:3005/${encodeURIComponent(emoji)}?style=${style}`
+	).then(data => console.log(data))
 
 	return { props: query }
 }

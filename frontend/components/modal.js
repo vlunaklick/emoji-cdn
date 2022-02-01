@@ -9,12 +9,12 @@ export default function Modal() {
 					<h1>Emoji to PNG, fast an easy.</h1>
 				</div>
 				<p>
-					Add an emoji to the URL. For example:{' '}
+					Add an emoji at the end of the URL. For example:{' '}
 					<a href='http://localhost:3000/🐭'>localhost:3000/🐭</a>.
 				</p>
 				<p>
 					To choose your prefered plataform to get the emoji from, add a{' '}
-					<span>?style=</span> query parameter ()
+					<span>?style=</span> query parameter also.
 				</p>
 				<p>
 					If you want to use an emoji across plataforms, and/or for

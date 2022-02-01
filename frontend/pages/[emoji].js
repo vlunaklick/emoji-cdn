@@ -1,10 +1,36 @@
-import { useRouter } from 'next/router'
+import axios from 'axios'
+import Image from 'next/image'
+import styled from 'styled-components'
 
 export default function Emoji(props) {
-	return <></>
+	return (
+		<EmojiWrapper>
+			<img src={`http://localhost:3005/public/emoji.png`} alt='emoji-img' />
+		</EmojiWrapper>
+	)
 }
 
-export function getServerSideProps(context) {
+const EmojiWrapper = styled.main`
+	min-height: 100vh;
+	background-color: #18181b;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	img {
+		-webkit-user-select: none;
+		margin: auto;
+		background-color: hsl(0, 0%, 90%);
+		transition: background-color 300ms;
+		width: 160px;
+		height: 160px;
+		box-shadow: 0px 8px 17px 2px rgba(0, 0, 0, 0.14),
+			0px 3px 14px 2px rgba(0, 0, 0, 0.12), 0px 5px 5px -3px rgba(0, 0, 0, 0.2);
+	}
+`
+
+export async function getServerSideProps(context) {
 	const { query, res } = context
 	let { style, emoji } = query
 
@@ -16,11 +42,17 @@ export function getServerSideProps(context) {
 		style = 'facebook/65'
 	}
 
-	const result = fetch(
-		`http://localhost:3005/${encodeURIComponent(emoji)}?style=${style}`
-	).then(data => console.log(data))
+	let result = await axios(
+		`http://localhost:3005/emojis/${encodeURIComponent(emoji)}?style=${style}`
+	)
 
-	return { props: query }
+	if (result.status === 200) {
+		return { props: { image: await result.data } }
+	}
+
+	if (res) {
+		res.writeHead(301, { Location: '/' }).end()
+	}
 }
 
 const stylesAvaible = [

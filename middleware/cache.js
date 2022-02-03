@@ -11,4 +11,4 @@ const defaultOptions = {
 
 const cacheInit = getExpeditiousCache(defaultOptions)
 
-export default cacheInit
+export { cacheInit as cache }

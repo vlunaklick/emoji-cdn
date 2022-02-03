@@ -5,8 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "nodemon server.js",
-		"initialize": "npm install"
+		"start": "nodemon server.js"
 	},
 	"keywords": [],
 	"author": "",
@@ -14,8 +13,10 @@
 	"type": "module",
 	"dependencies": {
 		"axios": "^0.25.0",
+		"base64-to-image": "^1.0.2",
 		"cors": "^2.8.5",
 		"express": "^4.17.2",
+		"express-expeditious": "^5.1.1",
 		"node-fetch": "^3.2.0",
 		"nodemon": "^2.0.15",
 		"xhr2": "^0.2.1"

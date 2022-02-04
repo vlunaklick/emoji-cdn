@@ -22,6 +22,10 @@ app.get('/', cache, (req, res) => {
 	res.status(200).sendFile(path.join(dir, '/index.html'))
 })
 
+app.get('/favicon.ico', cache, (req, res) => {
+	res.status(200).sendFile(path.join(dir, '/favicon.ico'))
+})
+
 app.get('/:emoji', cache, emojiController.serve)
 
 const PORT = process.env.PORT || 3005

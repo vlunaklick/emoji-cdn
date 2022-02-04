@@ -1,7 +1,6 @@
 import axios from 'axios'
 import pkg from 'xhr2'
 const { XMLHttpRequest } = pkg
-import fs from 'fs'
 import path from 'node:path'
 
 let __dirname = path.resolve(path.dirname(''))

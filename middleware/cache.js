@@ -2,7 +2,7 @@ import getExpeditiousCache from 'express-expeditious'
 
 const defaultOptions = {
 	namespace: 'expresscache',
-	defaultTtl: '1 minute',
+	defaultTtl: '5 minute',
 	statusCodeExpires: {
 		404: '5 minutes',
 		500: 0,

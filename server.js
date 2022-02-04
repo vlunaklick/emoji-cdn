@@ -2,7 +2,7 @@ import express from 'express'
 import cors from 'cors'
 import path from 'node:path'
 import { emojiController } from './controllers/emoji.controller.js'
-import cache from './middleware/cache.js'
+import { cache } from './middleware/cache.js'
 
 const app = express()
 

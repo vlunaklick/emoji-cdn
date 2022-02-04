@@ -31,9 +31,13 @@ class EmojiController {
 				fetchBlob(url[0], function (blob) {
 					let str = btoa(String.fromCharCode.apply(null, new Uint8Array(blob)))
 
-					console.log('entre')
+					let imgFinal = Buffer.from(str, 'base64')
 
-					res.send('<img src="' + 'data:image/png;base64,' + str + '"/>')
+					res.writeHead(200, {
+						'Content-Type': 'image/png',
+						'Content-Length': imgFinal.length,
+					})
+					res.end(imgFinal)
 				})
 			}
 		})

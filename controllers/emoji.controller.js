@@ -3,10 +3,6 @@ import pkg from 'xhr2'
 const { XMLHttpRequest } = pkg
 import path from 'node:path'
 
-let __dirname = path.resolve(path.dirname(''))
-
-let dir = path.join(__dirname, 'public')
-
 class EmojiController {
 	serve = async (req, res) => {
 		let { params, query } = req

@@ -29,7 +29,7 @@ const MainWrapper = styled.main`
 const ContentWrapper = styled.div`
 	width: 100%;
 	margin: 0 auto;
-	padding: 0.5rem;
+	padding: 0.8rem;
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;

@@ -13,7 +13,7 @@ export default function Title() {
 
 const TitleWrapper = styled.header`
 	min-width: 100%;
-	padding: 0 0 8px 0;
+
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -40,10 +40,6 @@ const TitleWrapper = styled.header`
 	}
 	a:hover {
 		color: #e5e5e5;
-	}
-
-	@media screen and (min-width: 1200px) {
-		padding: 10px;
 	}
 
 	@media screen and (min-width: 600px) {

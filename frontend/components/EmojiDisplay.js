@@ -75,7 +75,7 @@ export default function EmojiDisplay() {
 					set='apple'
 					showSkinTones={false}
 					theme={'dark'}
-					title={'Emoji Picker'}
+					showPreview={false}
 					onClick={(emoji, event) => {
 						event.preventDefault()
 						setEmoji(emoji.native)
@@ -113,7 +113,7 @@ const DisplayWrapper = styled.section`
 	.top-part {
 		display: flex;
 		flex-direction: column;
-		gap: 0.5rem;
+		gap: 1rem;
 		align-items: center;
 	}
 

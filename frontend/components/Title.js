@@ -4,7 +4,10 @@ export default function Title() {
 	return (
 		<TitleWrapper>
 			<h1>🧸 Emoji picker</h1>
-			<a href='https://cdnemoji.herokuapp.com/' target='_blank'>
+			<a
+				href='https://cdnemoji.herokuapp.com/'
+				target='_blank'
+				rel='noreferrer'>
 				Test our CDN API
 			</a>
 		</TitleWrapper>

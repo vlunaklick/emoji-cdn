@@ -69,6 +69,7 @@ export default function EmojiDisplay() {
 						layout='fill'
 						alt='Picture of the emoji'
 						objectFit='contain'
+						priority
 					/>
 				</div>
 				<Picker

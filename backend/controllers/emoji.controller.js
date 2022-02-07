@@ -41,7 +41,7 @@ class EmojiController {
 				let imgHTML = data.match(regexHTML)[0].replace('2x', '').trim()
 				let imgSRC = imgHTML.match(regexURL)
 
-				fetchBlob(imgSRC[0], function (blob) {
+				fetchBlob(imgSRC[1], function (blob) {
 					let src = btoa(String.fromCharCode.apply(null, new Uint8Array(blob)))
 
 					let imgFinal = Buffer.from(src, 'base64')

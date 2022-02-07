@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { BsFillArrowUpRightCircleFill } from 'react-icons/bs'
 import StylesDisplay from './StylesDisplay'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import 'emoji-mart/css/emoji-mart.css'
 import { Picker } from 'emoji-mart'
@@ -48,6 +48,20 @@ export default function EmojiDisplay() {
 			}
 		}
 	}
+
+	useEffect(() => {
+		if (emoji !== '') {
+			toast.success(`The emoji ${emoji} has been selected`, {
+				position: 'bottom-center',
+				autoClose: 2000,
+				hideProgressBar: true,
+				closeOnClick: true,
+				pauseOnHover: false,
+				draggable: true,
+				progress: undefined,
+			})
+		}
+	}, [emoji])
 
 	return (
 		<DisplayWrapper>
@@ -107,9 +121,16 @@ const DisplayWrapper = styled.section`
 	box-shadow: 0px 4px 6px -1px rgba(0,0,0,0.1) , 0px 2px 4px -1px rgba(0,0,0,0.06) ;
 
 	.img-lay {
-		width: 120px;
-		height: 120px;
+		width: 160px;
+		height: 160px;
 		position: relative;--
+	}
+	.emoji-mart-emoji{
+		cursor: pointer;
+
+		span{
+			cursor: pointer;
+		}
 	}
 
 	.top-part {

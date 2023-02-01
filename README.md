@@ -1,22 +1,17 @@
-# Emoji Catcher & Picker
+# Emoji Catcher
 
-In this project, I have re-implemented a CDN for emojis originally created by Ben Borgers using JavaScript and Node.js. The CDN is powered by Express and 'express-expenditious', which allows for efficient delivery of emoji files. In addition, I have developed an emoji picker feature that allows users to easily search and select from a variety of different emoji styles. This emoji picker demonstrates the functionality of the CDN API and provides a user-friendly interface for selecting and inserting emojis into text.
+Emoji Catcher is a Node.js and Express based emoji CDN, based on the original version by Ben Borgers. It also utilizes Express-Expenditious to improve image delivery speed through an efficient caching system. Additionally, it features customizable styles that can be searched via a URL query, allowing for a more versatile and adaptable emoji search experience.
 
-## Deploy: [Catcher](https://cdnemoji.herokuapp.com/) & [Picker](https://emoji-picker-cdn.vercel.app/) ✨
+## Deploy: [Live View](https://emoji-catcher.up.railway.app/) :destellos:
 
-You can see the lives versions of the projects clicking on the links above.
+You can view the live version of the project by clicking on the link above.
 
 ## Styles
 
-| |  |  |  |  |  |  |
---- | --- | --- | --- |--- |--- |--- 
-apple | google | microsoft | samsung | whatsapp | twitter | facebook
-messenger | joypixels | openmoji | emojidex | lg | htc | mozilla
-
-## Frontend
-
-- React.js: A JavaScript library for building user interfaces.
-- styled-components: CSS in JS library.
+|           |           |           |          |          |         |          |
+| --------- | --------- | --------- | -------- | -------- | ------- | -------- |
+| apple     | google    | microsoft | samsung  | whatsapp | twitter | facebook |
+| messenger | joypixels | openmoji  | emojidex | lg       | htc     | mozilla  |
 
 ## Backend
 
@@ -41,12 +36,13 @@ npm install
 Finally, you can run the project in development or production:
 
 ```bash
-npm run dev || build
+npm run dev || start
 ```
 
 ## Author
 
-👤 **vlunaklick**
+:silueta_de_busto: **vlunaklick**
 
 - Github: [@vlunaklick](https://github.com/vlunaklick)
 - LinkedIn: [@vlunaklick](https://linkedin.com/in/vlunaklick)
+  Feel free to reach out to me with any questions or feedback about this project!

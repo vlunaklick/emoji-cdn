@@ -3,8 +3,8 @@ import fetch from 'node-fetch'
 import pkg from 'xhr2'
 const { XMLHttpRequest } = pkg
 
-export const scrapeUrl = async html => {
-  const res = await fetch(html)
+export const scrapeUrl = async url => {
+  const res = await fetch(url)
   const html = await res.text()
   const $ = cheerio.load(html)
   return $

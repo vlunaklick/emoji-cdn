@@ -19,11 +19,7 @@ app.use('/public', express.static(dir))
 app.use(cors())
 
 app.get('/', cache, (req, res) => {
-	res.status(200).sendFile(path.join(dir, '/index.html'))
-})
-
-app.get('/favicon.ico', cache, (req, res) => {
-	res.status(200).sendFile(path.join(dir, '/favicon.ico'))
+  res.status(200).sendFile(path.join(dir, '/index.html'))
 })
 
 app.get('/:emoji', cache, emojiController.serve)
@@ -31,5 +27,5 @@ app.get('/:emoji', cache, emojiController.serve)
 const PORT = process.env.PORT || 3005
 
 app.listen(PORT, () => {
-	console.log(`app running on port ${PORT}`)
+  console.log(`app running on port ${PORT}`)
 })
